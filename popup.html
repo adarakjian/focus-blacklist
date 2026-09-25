@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Focus</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="panel">
+    <header class="panel__head">
+      <h1>Focus</h1>
+      <p class="panel__sub">Sites you type here get blocked everywhere.</p>
+    </header>
+
+    <form id="add-form" class="add-row" autocomplete="off">
+      <input
+        id="site-input"
+        type="text"
+        placeholder="youtube.com"
+        aria-label="Site to blacklist"
+      />
+      <button type="submit" aria-label="Add to blacklist">Add</button>
+    </form>
+
+    <div id="tag-list" class="tag-list" aria-live="polite"></div>
+    <p id="empty-state" class="empty-state">Nothing blacklisted yet.</p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

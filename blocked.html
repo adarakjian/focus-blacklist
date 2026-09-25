@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blocked</title>
+  <style>
+    :root {
+      --ink: #1b2420;
+      --paper: #eef0ea;
+      --forest: #2f5233;
+      --forest-deep: #203a24;
+      --brick: #a8493d;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .card {
+      max-width: 420px;
+      text-align: center;
+      padding: 40px 32px;
+    }
+    .mark {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: var(--forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mark svg { width: 26px; height: 26px; }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: rgba(27, 36, 32, 0.68);
+      margin: 0 0 26px;
+    }
+    #site {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    button {
+      border: none;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--forest);
+      color: var(--paper);
+      transition: background 0.15s ease;
+    }
+    button:hover { background: var(--forest-deep); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#eef0ea" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"></circle>
+        <line x1="7" y1="7" x2="17" y2="17"></line>
+      </svg>
+    </div>
+    <h1>This site is blocked</h1>
+    <p><span id="site">This site</span> is on your focus blacklist. Remove it from the extension popup if you need back in.</p>
+    <button id="close-tab">Close tab</button>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>
